@@ -5,8 +5,12 @@
  */
 package com.ict4305group3.dateproject;
 
+import static com.ict4305group3.dateproject.Date.isLeapYear;
+import java.text.SimpleDateFormat;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * 
@@ -16,6 +20,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * @author Kevin Taylor
  */
 public class DateTest {
+
+    private static Object getYear(DateTest d) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     public DateTest() {
         
@@ -26,7 +34,7 @@ public class DateTest {
      */
     @Test
     public void testGetDay() {
-        
+    
     }
 
     /**
@@ -58,7 +66,12 @@ public class DateTest {
      */
     @Test
     public void testIsLeapYear() {
-        
+        assertFalse(isLeapYear(2010));
+        assertTrue(isLeapYear(2012));
+        assertFalse(isLeapYear(2014));
+        assertTrue(isLeapYear(2016));
+        assertFalse(isLeapYear(2018));
+        assertTrue(isLeapYear(2020));
     }
 
     /**

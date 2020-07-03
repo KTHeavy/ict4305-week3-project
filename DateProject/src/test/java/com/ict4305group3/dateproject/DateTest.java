@@ -26,6 +26,22 @@ public class DateTest {
     
     public DateTest() {
         
+        var expectedDefaultDate = "01/01/1970";
+        var actualDefualtDate = toString(dateDefault.day + "/" + dateDefault.month + "/" + dateDefault.year);
+        var exptectedCopyDate = ("01/01/1970");
+        var actualCopyDate = toString(dateCopy.day + "/" + dateCopy.month + "/" + dateCopy.year);
+        var expectedManualDate = ("29/02/2020");
+        var actualManualDate = toString(dateManual.day + "/" + dateManual.month + "/" + dateManual.year);
+	    int expectedJulianDate = 2470166;
+	    var actualJulianDate = dateJulian.mJulianNumber;
+	    Date dateInValid = new Date(39,13,2020);
+	    String inValidMessage = toString(dateInValid.day + "/" + dateInValid.month + "/" + dateInValid.year + " is not a valid Date. Please try again.");
+
+        assertEquals(expectedDefaultDate, actualDefualtDate);
+        assertEquals(exptectedCopyDate, actualCopyDate);
+        assertEquals(expectedManualDate, actualManualDate);
+	    assertEquals(expectedJulianDate, actualJulianDate);
+	    assertEquals(dateInValid, inValidMessage);
     }
 
     /**
@@ -96,6 +112,19 @@ public class DateTest {
     @Test
     public void testGetJulianNumber() {
         
+        int expectedDefaultJulianNumber = 2440588;
+	    int actualDefaultJulianNumber = dateDefault.getJulianNumber();
+	    int exptectedCopyJulianNumber = 2440588;
+	    int actualCopyJulianNumber = dateCopy.getJulianNumber();
+	    int expectedManualJulianNumber = 2458909;
+	    int actualManualJulianNumber = dateManual.getJulianNumber();
+	    int expectedJulianNumber = 2470166;
+	    int actualJulianNumber = dateJulian.getJulianNumber();
+
+	    assertEquals(expectedDefaultJulianNumber, actualDefaultJulianNumber);
+	    assertEquals(exptectedCopyJulianNumber, actualCopyJulianNumber);
+	    assertEquals(expectedManualJulianNumber, actualManualJulianNumber);
+	    assertEquals(expectedJulianNumber, actualJulianNumber);
     }
 
     /**
@@ -117,6 +146,22 @@ public class DateTest {
     @Test
     public void testGetLastDayOfMonth() {
         
+        int expectedDefaultLastDayofMonth = 31;
+	    int actualDefaultLastDayofMonth = Date.getLastDayOfMonth(dateDefault.getMonth(), dateDefault.getYear());
+	    int exptectedCopyLastDayofMonth = 31;
+	    int actualCopyLastDayofMonth = Date.getLastDayOfMonth(dateCopy.getMonth(), dateCopy.getYear());
+	    int expectedManualLastDayofMonth = 29;
+	    int actualManualLastDayofMonth = Date.getLastDayOfMonth(dateManual.getMonth(), dateManual.getYear());
+	    int expectedJulianLastDayOfMonth = 31;
+	    int actualJulianLastDayOfMonth = Date.getLastDayOfMonth(dateJulian.getMonth(), dateJulian.getMonth());
+
+	    assertEquals(expectedDefaultLastDayofMonth, actualDefaultLastDayofMonth);
+	    assertEquals(exptectedCopyLastDayofMonth, actualCopyLastDayofMonth);
+	    assertEquals(expectedManualLastDayofMonth, actualManualLastDayofMonth);
+	    assertEquals(expectedJulianLastDayOfMonth, actualJulianLastDayOfMonth);
+    }
+    private String toString(String string) {
+	    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

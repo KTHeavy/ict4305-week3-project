@@ -52,8 +52,15 @@ public class DateTest {
             String error = "Not a valid Date. Please try again.";
             assertEquals(error, expected.getMessage());
         }
+	try {
+            Date illegalJulianNumber = new Date(00000001);
+        } catch (IllegalArgumentException expected) {
+            String errorJulian = "Not a valid Julian Number.  Please try again.";
+            assertEquals(errorJulian, expected.getMessage());
+        }
     }
     
+
     /**
      * Test of getDay method, of class Date.
      */

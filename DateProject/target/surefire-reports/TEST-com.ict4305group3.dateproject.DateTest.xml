@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="7" failures="0" name="com.ict4305group3.dateproject.DateTest" time="0.001" errors="0" skipped="0">
+<testsuite tests="7" failures="0" name="com.ict4305group3.dateproject.DateTest" time="0.002" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="14.0.1+7"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/lib"/>
-    <property name="maven.multiModuleProjectDirectory" value="/Users/ipiesh/Documents/_codingLocal/School/ICT4305/ict4305-week3-project/DateProject"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/dawnt/Documents/GitHub/ict4305-week3-project/DateProject"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -14,11 +14,11 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="test" value="com.ict4305group3.dateproject.DateTest"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/Users/ipiesh/Documents/_codingLocal/School/ICT4305/ict4305-week3-project/DateProject"/>
+    <property name="user.dir" value="/Users/dawnt/Documents/GitHub/ict4305-week3-project/DateProject"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="java.runtime.version" value="14.0.1+7"/>
     <property name="os.arch" value="x86_64"/>
-    <property name="java.io.tmpdir" value="/var/folders/q0/r4ncgxm51n79nqz5203541140000gn/T/"/>
+    <property name="java.io.tmpdir" value="/var/folders/w7/9k59sbvj1nq1v5f5qcd2y3hw0000gn/T/"/>
     <property name="line.separator" value="
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
@@ -26,22 +26,22 @@
     <property name="maven.ext.class.path" value="/Applications/NetBeans/Apache NetBeans 11.2.app/Contents/Resources/NetBeans/netbeans/java/maven-nblib/netbeans-eventspy.jar"/>
     <property name="classworlds.conf" value="/Applications/NetBeans/Apache NetBeans 11.2.app/Contents/Resources/NetBeans/netbeans/java/maven/bin/m2.conf"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.library.path" value="/Users/ipiesh/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.library.path" value="/Users/dawnt/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
     <property name="jdk.debug" value="release"/>
     <property name="java.class.version" value="58.0"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="10.15.6"/>
+    <property name="os.version" value="10.13.6"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="user.home" value="/Users/ipiesh"/>
-    <property name="user.timezone" value="America/Los_Angeles"/>
+    <property name="user.home" value="/Users/dawnt"/>
+    <property name="user.timezone" value="America/Chicago"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.specification.version" value="14"/>
-    <property name="user.name" value="ipiesh"/>
+    <property name="user.name" value="dawnt"/>
     <property name="java.class.path" value="/Applications/NetBeans/Apache NetBeans 11.2.app/Contents/Resources/NetBeans/netbeans/java/maven/boot/plexus-classworlds-2.5.2.jar"/>
     <property name="java.vm.specification.version" value="14"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=com.ict4305group3.dateproject.DateTest -Dmaven.ext.class.path=/Applications/NetBeans/Apache NetBeans 11.2.app/Contents/Resources/NetBeans/netbeans/java/maven-nblib/netbeans-eventspy.jar test-compile surefire:test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=com.ict4305group3.dateproject.DateTest -Dmaven.ext.class.path=/Applications/NetBeans/Apache NetBeans 11.2.app/Contents/Resources/NetBeans/netbeans/java/maven-nblib/netbeans-eventspy.jar surefire:test"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -57,7 +57,7 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase classname="com.ict4305group3.dateproject.DateTest" name="com.ict4305group3.dateproject.DateTest.testThrownExeptions" time="0.001"/>
+  <testcase classname="com.ict4305group3.dateproject.DateTest" name="com.ict4305group3.dateproject.DateTest.testThrownExeptions" time="0.002"/>
   <testcase classname="com.ict4305group3.dateproject.DateTest" name="com.ict4305group3.dateproject.DateTest.testGetDay" time="0"/>
   <testcase classname="com.ict4305group3.dateproject.DateTest" name="com.ict4305group3.dateproject.DateTest.testGetMonth" time="0"/>
   <testcase classname="com.ict4305group3.dateproject.DateTest" name="com.ict4305group3.dateproject.DateTest.testGetYear" time="0"/>

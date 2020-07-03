@@ -58,8 +58,7 @@ public class Date {
      */
     public Date( int day, int month, int year ) {
         if(!isValidDate(day, month, year)) 
-            throw new IllegalArgumentException(day + "/" + month + "/" + year 
-                    + " is not a valid Date. Please try again.");
+            throw new IllegalArgumentException("Not a valid Date. Please try again.");
         this.day = day;
         this.month = month;
         this.year = year;

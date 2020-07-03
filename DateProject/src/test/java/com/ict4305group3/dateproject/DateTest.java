@@ -26,24 +26,34 @@ public class DateTest {
     
     public DateTest() {
         
-        var expectedDefaultDate = "01/01/1970";
-        var actualDefualtDate = toString(dateDefault.day + "/" + dateDefault.month + "/" + dateDefault.year);
-        var exptectedCopyDate = ("01/01/1970");
-        var actualCopyDate = toString(dateCopy.day + "/" + dateCopy.month + "/" + dateCopy.year);
-        var expectedManualDate = ("29/02/2020");
-        var actualManualDate = toString(dateManual.day + "/" + dateManual.month + "/" + dateManual.year);
+        String expectedDefaultDate = "1/1/1970";
+        String actualDefualtDate = dateDefault.getDay() + "/" + dateDefault.getMonth() + "/" + dateDefault.getYear();
+        String exptectedCopyDate = "1/1/1970";
+        String actualCopyDate = dateCopy.getDay() + "/" + dateCopy.getMonth() + "/" + dateCopy.getYear();
+        String expectedManualDate = "29/2/2020";
+        String actualManualDate = dateManual.getDay()+ "/" + dateManual.getMonth() + "/" + dateManual.getYear();
 	int expectedJulianDate = 2470166;
-	var actualJulianDate = dateJulian.mJulianNumber;
-	Date dateInValid = new Date(39,13,2020);
-	String inValidMessage = toString(dateInValid.day + "/" + dateInValid.month + "/" + dateInValid.year + " is not a valid Date. Please try again.");
+	int actualJulianDate = dateJulian.getJulianNumber();
 
         assertEquals(expectedDefaultDate, actualDefualtDate);
         assertEquals(exptectedCopyDate, actualCopyDate);
         assertEquals(expectedManualDate, actualManualDate);
 	assertEquals(expectedJulianDate, actualJulianDate);
-	assertEquals(dateInValid, inValidMessage);
     }
-
+    
+    /**
+     * Test of thrown exceptions, of class Date.
+     */
+    @Test
+    public void testThrownExeptions(){
+        try {
+            Date illegalDate = new Date(39,13,2020);
+        } catch (IllegalArgumentException expected) {
+            String error = "Not a valid Date. Please try again.";
+            assertEquals(error, expected.getMessage());
+        }
+    }
+    
     /**
      * Test of getDay method, of class Date.
      */
@@ -159,9 +169,6 @@ public class DateTest {
 	assertEquals(exptectedCopyLastDayofMonth, actualCopyLastDayofMonth);
 	assertEquals(expectedManualLastDayofMonth, actualManualLastDayofMonth);
 	assertEquals(expectedJulianLastDayOfMonth, actualJulianLastDayOfMonth);
-    }
-    private String toString(String string) {
-	throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

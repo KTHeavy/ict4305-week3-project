@@ -58,7 +58,8 @@ public class Date {
      */
     public Date( int day, int month, int year ) {
         if(!isValidDate(day, month, year)) 
-            throw new IllegalArgumentException("Invalid Date");
+            throw new IllegalArgumentException(day + "/" + month + "/" + year 
+                    + " is not a valid Date. Please try again.");
         this.day = day;
         this.month = month;
         this.year = year;
@@ -136,11 +137,11 @@ public class Date {
     }; 
 
     private int toJulianNumber( int day, int month, int year ){
-        int JulianNumber = (1461 * (year + 4800 + (month - 14) / 12)) / 4
-                + (367 * (month - 2 - 12 * ((month - 14) / 12))) / 12
-                - (3 * ((year + 4900 + (month - 14) / 12) / 100))
-                / 4 + day - 32075;
-        return JulianNumber;
+        int julianNumber = ( 1461 * (year + 4800 + (month - 14 ) / 12 ) ) / 4 
+                + ( 367 * (month - 2 - 12 * ( (month - 14 ) / 12 ) ) ) / 12 
+                - ( 3 * ( ( year + 4900 + ( month - 14 ) / 12 ) / 100 ) ) / 4 
+                + day - 32075; 
+        return julianNumber;
     }; 
 
     private static int[] fromJulianNumber( int mJulianNumber ){

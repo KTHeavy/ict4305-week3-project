@@ -6,12 +6,10 @@
 package com.ict4305group3.dateproject;
 
 import static com.ict4305group3.dateproject.Date.isLeapYear;
-import java.text.SimpleDateFormat;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-
 /**
  * 
  * @author Ivan Piesh
@@ -20,10 +18,11 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  * @author Kevin Taylor
  */
 public class DateTest {
-
-    private static Object getYear(DateTest d) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
+    Date dateDefault = new Date();
+    Date dateCopy = new Date(dateDefault);
+    Date dateManual = new Date(29, 02, 2020);
+    Date dateJulian = new Date(2470166);
     
     public DateTest() {
         
@@ -34,7 +33,20 @@ public class DateTest {
      */
     @Test
     public void testGetDay() {
-    
+        
+        int expectedDefaultDay = 1;
+        int actualDefualtDay = dateDefault.getDay();
+        int exptectedCopyDay = 1;
+        int actualCopyDay = dateCopy.getDay();
+        int expectedManualDay = 29;
+        int actualManualDay = dateManual.getDay();
+        int expectedJulianDay = 25;
+        int actualJulianDay = dateJulian.getDay();
+        
+        assertEquals(expectedDefaultDay, actualDefualtDay);
+        assertEquals(exptectedCopyDay, actualCopyDay);
+        assertEquals(expectedManualDay, actualManualDay);
+        assertEquals(expectedJulianDay, actualJulianDay);
     }
 
     /**
@@ -43,6 +55,19 @@ public class DateTest {
     @Test
     public void testGetMonth() {
         
+        int expectedDefaultMonth = 1;
+        int actualDefualtMonth = dateDefault.getMonth();
+        int exptectedCopyMonth = 1;
+        int actualCopyMonth = dateCopy.getMonth();
+        int expectedManualMonth = 02;
+        int actualManualMonth = dateManual.getMonth();
+        int expectedJulianMonth = 12;
+        int actualJulianMonth = dateJulian.getMonth();
+        
+        assertEquals(expectedDefaultMonth, actualDefualtMonth);
+        assertEquals(exptectedCopyMonth, actualCopyMonth);
+        assertEquals(expectedManualMonth, actualManualMonth);
+        assertEquals(expectedJulianMonth, actualJulianMonth);
     }
 
     /**
@@ -50,7 +75,19 @@ public class DateTest {
      */
     @Test
     public void testGetYear() {
+        int expectedDefaultYear = 1970;
+        int actualDefualtYear = dateDefault.getYear();
+        int exptectedCopyYear = 1970;
+        int actualCopyYear = dateCopy.getYear();
+        int expectedManualYear = 2020;
+        int actualManualYear = dateManual.getYear();
+        int expectedJulianYear = 2050;
+        int actualJulianYear = dateJulian.getYear();
         
+        assertEquals(expectedDefaultYear, actualDefualtYear);
+        assertEquals(exptectedCopyYear, actualCopyYear);
+        assertEquals(expectedManualYear, actualManualYear);
+        assertEquals(expectedJulianYear, actualJulianYear);
     }
 
     /**

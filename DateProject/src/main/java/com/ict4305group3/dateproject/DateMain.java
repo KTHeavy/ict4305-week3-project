@@ -15,9 +15,8 @@ package com.ict4305group3.dateproject;
 public class DateMain {
     
     public static void main(String[] args) {
-        
-        System.out.println("------------------------------------------------");
-        System.out.println("Please use the Unit Test to test the Date class.");
-        System.out.println("------------------------------------------------");
+        System.out.println("--------------------------------------------------");
+        System.out.println("Please use DateTest.java to conduct the unit test.");
+        System.out.println("--------------------------------------------------");
     }   
 }

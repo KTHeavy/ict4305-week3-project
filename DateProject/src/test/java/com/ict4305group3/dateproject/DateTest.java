@@ -42,25 +42,33 @@ public class DateTest {
     }
     
     /**
-     * Test of thrown exceptions, of class Date.
+     * Test of thrown exceptions for Date(day, month, year) input, of class Date.
      */
     @Test
-    public void testThrownExeptions(){
+    public void testDateThrownExeptions(){
         try {
             Date illegalDate = new Date(39,13,2020);
-        } catch (IllegalArgumentException expected) {
+        } 
+        catch (IllegalArgumentException expected) {
             String error = "Not a valid Date. Please try again.";
             assertEquals(error, expected.getMessage());
         }
-	try {
-            Date illegalJulianNumber = new Date(00000001);
-        } catch (IllegalArgumentException expected) {
+    }
+    
+    /**
+     * Test of thrown exceptions for Date(julianNumber) input, of class Date.
+     */
+    @Test
+    public void testJulianThrownExeptions(){
+        	try {
+            Date illegalJulianNumber = new Date(12345);
+        } 
+        catch (IllegalArgumentException expected) {
             String errorJulian = "Not a valid Julian Number.  Please try again.";
             assertEquals(errorJulian, expected.getMessage());
         }
     }
     
-
     /**
      * Test of getDay method, of class Date.
      */

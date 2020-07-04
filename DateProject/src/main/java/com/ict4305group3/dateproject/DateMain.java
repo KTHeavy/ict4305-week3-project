@@ -13,10 +13,14 @@ package com.ict4305group3.dateproject;
  * @author Kevin Taylor
  */
 public class DateMain {
-    
+
     public static void main(String[] args) {
+        Date date = new Date();
+        System.out.println("Start date of epoch time is (MM/DD/YYYY): " 
+                + date.getMonth() + "/" + date.getDay() + "/" + date.getYear());
         System.out.println("--------------------------------------------------");
         System.out.println("Please use DateTest.java to conduct the unit test.");
         System.out.println("--------------------------------------------------");
-    }   
+    }
+
 }
